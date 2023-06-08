@@ -1,5 +1,6 @@
-import { Container, Heading, Input, VStack } from '@chakra-ui/react';
+import { Button, Container, Heading, Input, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-router-dom';    
 
 const Login = () => {
     return (
@@ -11,7 +12,7 @@ const Login = () => {
                 <VStack
                     alignItems={"stretch"}
                     spacing={"8"}
-                    w={"96"}
+                    w={["full", "96"]}
                     margin={"auto"}
                     my={"16"}>
                     <Heading>Welcome back!</Heading>
@@ -27,6 +28,24 @@ const Login = () => {
                         required
                         focusBorderColor={"purple.500"}
                     />
+                    <Button variant={"link"}
+                        alignSelf={"flex-end"}>
+                        <Link to={"/forgetpassword"}>Forget password?</Link>
+                    </Button>
+                    <Button
+                        colorScheme='purple'
+                        type='submit'>
+                        Log In
+                    </Button>
+                    <Text
+                        textAlign={"right"}>
+                        New User?{" "}
+                        <Button variant={"link"}
+                            alignSelf={"flex-end"}
+                            colorScheme={"purple"}>
+                            <Link to={"/signup"}>Sign Up</Link>
+                        </Button>
+                    </Text>
                 </VStack>
             </form>
         </Container>
