@@ -21,6 +21,7 @@ const Header = () => {
     return (
         <>
             <Button
+                zIndex={"overlay"}
                 pos={'fixed'}
                 top={'3'}
                 left={'3'}
@@ -47,28 +48,28 @@ const Header = () => {
                         <VStack alignItems={"flex-start"}>
 
                             <Button
-                            onClick={onClose}
+                                onClick={onClose}
                                 colorScheme={'purple'}
                                 variant={"ghost"}
                             >
                                 <Link to={'/'}>Home</Link>
                             </Button>
                             <Button
-                            onClick={onClose}
+                                onClick={onClose}
                                 colorScheme={'purple'}
                                 variant={"ghost"}
                             >
                                 <Link to={'/videos'}>Videos</Link>
                             </Button>
                             <Button
-                            onClick={onClose}
+                                onClick={onClose}
                                 colorScheme={'purple'}
                                 variant={"ghost"}
                             >
                                 <Link to={'/videos?category=free'}>Free Videos</Link>
                             </Button>
                             <Button
-                            onClick={onClose}
+                                onClick={onClose}
                                 colorScheme={'purple'}
                                 variant={"ghost"}
                             >
